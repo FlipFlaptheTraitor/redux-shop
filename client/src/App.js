@@ -10,8 +10,10 @@ import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
+// creates a provider which makes the redux store avalible to the components that use redux
 import { Provider } from 'react-redux';
-import store from "./redux/store";
+// redux store
+import store from "./utils/store";
 
 const client = new ApolloClient({
   request: (operation) => {

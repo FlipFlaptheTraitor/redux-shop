@@ -10,8 +10,9 @@ import {
   CLEAR_CART,
   TOGGLE_CART
 } from "./actions";
-
-const defaultState = {
+//creates a default state for the store store to load onto the page
+// the properties comes from each component that was adjusted to use redux
+const defaultStore = {
   products: [],
   cart: [],
   cartOpen: false,
@@ -19,7 +20,7 @@ const defaultState = {
   currentCategory: '',
 }
 
-export const reducer = (state=defaultState, action) => {
+export const reducer = (state=defaultStore, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
